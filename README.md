@@ -37,8 +37,15 @@ As per the OEL requirements, this app addresses:
 The code is organized for scalability and readability:
 ```text
 lib/
-├── main.dart             # Entry point & Hive Initialization
-├── screens/              # All UI Screens (Login, Home, Quiz, Splash)
-├── models/               # Question & User Data structures
-├── widgets/              # Reusable UI components (Custom Buttons, Cards)
-└── assets/               # Local images and icons
+├── main.dart                 # Entry point aur Hive initialization
+├── splash_screen.dart        # Branding aur auto-login logic
+├── login_screen.dart         # Authentication aur form validation
+├── home_screen.dart          # Main dashboard
+├── course_menu.dart          # Subjects selection menu
+├── quiz_screen.dart          # Core quiz logic aur user interaction
+├── quiz_data.dart            # Questions aur answers ka data store
+├── review_screen.dart        # Quiz ke baad answers ka review
+├── leaderboard_screen.dart   # High scores aur ranking
+├── user_profile.dart         # User profile ki settings
+├── user_details.dart         # User ki basic information
+└── user_history.dart         # Pichli quiz attempts ka record
