@@ -1,51 +1,61 @@
-# 🚀 Quiz Quest - A Gamified Learning Experience
+# 🎮 Quiz Quest | Gamified Learning Experience
 
-**Quiz Quest** is a modern, interactive mobile application built with **Flutter**. It is designed to make learning engaging, accessible, and productive. This project was developed as an **Open Ended Lab (OEL)** for the Mobile Application Development (Lab) course at **NUML**.
+[![Flutter Version](https://img.shields.io/badge/Flutter-3.10+-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?logo=dart&logoColor=white)](https://dart.dev)
+[![Database](https://img.shields.io/badge/Database-Hive%20NoSQL-orange?logo=hive&logoColor=white)](https://pub.dev/packages/hive)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 🌟 Project Overview
-The core philosophy behind **Quiz Quest** is to promote the **wellbeing of individuals and society** by providing a digital environment for cognitive stimulation. Instead of passive screen time, it encourages active learning and memory retention through a competitive and rewarding quiz system.
-
-### 🎯 Goal: Wellbeing of Individual & Society
-As per the OEL requirements, this app addresses:
-*   **Individual Wellbeing:** Enhances focus, memory, and provides a sense of achievement through scoring.
-*   **Social Wellbeing:** democratizes education by providing a free, easy-to-use learning tool for students and lifelong learners.
+**Quiz Quest** is a high-performance, interactive mobile application developed as an **Open Ended Lab (OEL)** at the **National University of Modern Languages (NUML)**. It leverages gamification to transform traditional assessment into a rewarding cognitive journey.
 
 ---
 
-## ✨ Features
-*   **Interactive Quiz Interface:** Smooth transitions and real-time feedback during quiz sessions.
-*   **Offline Data Persistence:** Powered by **Hive DB**, allowing users to save their login sessions and track progress without needing the internet.
-*   **Categorized Learning:** Users can choose from various subjects like Computer Science, Mathematics, and General Knowledge.
-*   **Optimized Performance:** The app is built with ABI-splitting technology, ensuring a tiny footprint (<17MB) on modern devices.
-*   **Secure Authentication:** A robust Login/Registration system with "Remember Me" functionality.
-*   **Modern UI/UX:** Deep Purple & Amber aesthetic theme with high-quality icons and typography.
+## 🎯 Core Philosophy & Wellbeing
+Designed with a focus on **SDG-3 (Good Health and Wellbeing)**, the app aims to promote:
+* **🧠 Cognitive Agility:** Enhances focus and logical thinking through timed challenges.
+* **🏆 Psychological Achievement:** Provides instant gratification via real-time scoring and progress tracking.
+* **🌍 Democratized Education:** A lightweight (<17MB), offline-capable tool ensuring learning is accessible to everyone, anywhere.
 
 ---
 
-## 🛠️ Tech Stack
-*   **Framework:** [Flutter](https://flutter.dev) (v3.10.3 or higher)
-*   **Language:** [Dart](https://dart.dev)
-*   **Database:** [Hive & Hive Flutter](https://pub.dev/packages/hive) (Lightweight NoSQL)
-*   **State Management:** Local State Management (Stateful Widgets)
-*   **Icons:** Cupertino Icons & Material Design Icons
+## ✨ Key Features
+* **📦 Offline-First Architecture:** Full functionality without internet using **Hive NoSQL**.
+* **🔐 Intelligent Auth:** Secure Login/Registration with "Remember Me" session persistence.
+* **📚 Dynamic Subjects:** Curated quizzes for **Computer Science**, **Mathematics**, and **General Knowledge**.
+* **⚡ Performance Optimized:** ABI Splitting ensures a smooth experience on all devices.
+* **📝 Real-time Review:** Post-quiz analysis to review mistakes and learn effectively.
+* **📊 User Analytics:** Detailed history logs to track academic growth over time.
 
 ---
 
-## 📁 Project Structure
-The code is organized for scalability and readability:
-```text
+## 🛠️ Technical Stack & Dependencies
+
+| Package | Version | Purpose |
+| :--- | :--- | :--- |
+| **Hive** | `^2.2.3` | Lightweight and blazing fast NoSQL database. |
+| **Hive Flutter** | `^1.1.0` | Extension for Hive for seamless Flutter integration. |
+| **Cupertino Icons** | `^1.0.8` | Premium iconography for a modern aesthetic. |
+| **Hive Generator** | `^2.0.1` | *(Dev)* Code generator for Hive TypeAdapters. |
+| **Build Runner** | `^2.4.6` | *(Dev)* Automated tool for generating boilerplate code. |
+
+---
+
+## 🚀 Getting Started & Setup Guide
+
+### 1. Prerequisites
+Ensure you have the Flutter SDK installed and configured. Verify by running:
+```bash
+flutter --version
+
+git clone [https://github.com/YourUsername/QuizQuest.git](https://github.com/YourUsername/QuizQuest.git)
+cd QuizQuest
+
 lib/
-├── main.dart                 # Entry point aur Hive initialization
-├── splash_screen.dart        # Branding aur auto-login logic
-├── login_screen.dart         # Authentication aur form validation
-├── home_screen.dart          # Main dashboard
-├── course_menu.dart          # Subjects selection menu
-├── quiz_screen.dart          # Core quiz logic aur user interaction
-├── quiz_data.dart            # Questions aur answers ka data store
-├── review_screen.dart        # Quiz ke baad answers ka review
-├── leaderboard_screen.dart   # High scores aur ranking
-├── user_profile.dart         # User profile ki settings
-├── user_details.dart         # User ki basic information
-└── user_history.dart         # Pichli quiz attempts ka record
+├── main.dart             # Application Entry Point & Hive Initialization
+├── splash_screen.dart    # Branding & Auto-Login Logic
+├── login_screen.dart     # Authentication & Form Validation
+├── home_screen.dart      # Main Navigation Dashboard
+├── quiz_screen.dart      # Core Quiz Engine & Scoring Logic
+├── quiz_data.dart        # Static Questions & Answers Data
+├── services/             # Database Handlers (Hive) & Logic Helpers
+├── models/               # Data Models (User, Score, etc.)
+└── components/           # Reusable UI Widgets (Custom Buttons, Cards)
